@@ -1,0 +1,41 @@
+.Tableau_bord {
+    display: flex;
+    width: 100%;
+  }
+  
+  .gauche {
+    flex: 1;
+    background-color: #645d5d;
+    padding: 20px;
+  }
+  .entete{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #9881eb;
+  }
+  .menu{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
+  .elment_de_menu{
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: azure;
+    margin: 10px;
+    width: 200px;
+    height: 55px;
+    background-color: gray;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .droite{
+    flex: 3;
+    background-color: #f8f7f7;
+    padding: 20px;
+  }
+  
