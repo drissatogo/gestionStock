@@ -1,0 +1,32 @@
+.droitee{ 
+
+}
+.trie{
+     display: flex;
+     width: 100%;
+     justify-content: space-between;
+  }
+  .actu{
+        display: flex;
+         justify-content: space-between;
+         width: 100%;
+     }
+     .bord-tableau{
+         width: 220px;
+        height: 100px;  
+       }
+       
+       .tableau{
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+        }
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          border: 1px solid #ddd;
+      }
+      th, td {
+        text-align: center;
+        padding: 10px;
+      }

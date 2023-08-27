@@ -1,0 +1,26 @@
+.reception{
+  justify-content: start;
+  width: 100%;
+}
+.tri{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.tableau{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 20%;
+}
+th, td {
+text-align: center;
+padding: 10px;
+}
+

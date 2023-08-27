@@ -1,15 +1,19 @@
-.Tableau_bord {
-    display: flex;
+
+.ensemble {
+    display:flex ;
     width: 100%;
-  }
-  
+    justify-content: space-between;
+  } 
   .gauche {
-    flex: 1;
+    width: 30%;
     background-color: #645d5d;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
   .entete{
-    display: flex;
+    width: 400px;
     justify-content: center; 
     align-items: center; 
     background-color: #9881eb;
@@ -33,9 +37,38 @@
     justify-content: center;
     align-items: center;
   }
-  .droite{
-    flex: 3;
-    background-color: #f8f7f7;
-    padding: 20px;
+  
+
+//   // .actu{
+//   //   display: flex;
+//   //   width: 100%;
+//   //   justify-content: space-between;
+//   // }
+//   // .bord-tableau{
+//   //   width: 220px;
+//   //   height: 100px;
+//   //   gap: 5px;
+//   // }
+//   .text{
+//     font-weight: bold;
+//     size: 20px; margin-left: 10px;
+//     margin-top: -5px;
+//   }
+  h1{
+    text-align: center;
   }
+//   // .tableau{
+//   //   display: flex;
+//   //   width: 100%;
+//   //   justify-content: space-between;
+//   // }
+// //   table {
+// //     border-collapse: collapse;
+// //     width: 100%;
+// //     border: 1px solid #ddd;
+// // }
+// // th, td {
+// //   text-align: center;
+// //   padding: 10px;
+// // }
   

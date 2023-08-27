@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Router} from '@angular/router'
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'gestionStock';
+  constructor(private redirection:Router){}
+  onDashboard(){
+this.redirection.navigateByUrl('dashboard');
+  }
+  onReception(){
+    this.redirection.navigateByUrl('reception');
 }
+onEtatStock(){
+  this.redirection.navigateByUrl('etat')
+}
+}
+
