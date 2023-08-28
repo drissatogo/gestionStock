@@ -8,13 +8,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { EtatStockComponent } from './etat-stock/etat-stock.component';
 import { AjoutDeProduitComponent } from './ajout-de-produit/ajout-de-produit.component';
 import { ExpeditionComponent } from './expedition/expedition.component';
+import { AccueilComponent } from './accueil/accueil.component';
 
 const routes:Routes=[
-  // {path:'dashboard',component:DashboardComponent},
-  // {path:'reception',component:ReceptionComponent},
-  // {path:'etat',component:EtatStockComponent},
-  // {path:'ajoutProduit',component:AjoutDeProduitComponent},
-  // {path:'gohome',component:DashboardComponent}
+  {path:'dashboard',component:DashboardComponent},
+  {path:'reception',component:ReceptionComponent},
+  {path:'etat',component:EtatStockComponent},
+  {path:'ajoutProduit',component:AjoutDeProduitComponent},
+  {path:'gohome',component:DashboardComponent}
 ]
 
 @NgModule({
@@ -24,7 +25,8 @@ const routes:Routes=[
     ReceptionComponent,
     EtatStockComponent,
     AjoutDeProduitComponent,
-    ExpeditionComponent
+    ExpeditionComponent,
+    AccueilComponent
   ],
   imports: [
     BrowserModule,

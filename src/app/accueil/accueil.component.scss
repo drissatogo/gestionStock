@@ -1,0 +1,85 @@
+.Ma{
+    display: flex;
+  }
+  .gauche{
+    background-color: rgb(34, 33, 33);
+    left: 0%;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+  }
+  .droite{
+    width: 70%;
+    justify-content: center;
+  }
+  .trie{
+       display: flex;
+       width: 100%;
+       justify-content: space-between;
+    }
+    .container{
+          display: flex;
+           justify-content: space-between;
+           width: 90%;
+       }
+       .bord-tableau{
+           width: 220px;
+          height: 100px;  
+         }
+         
+         .tableau{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+          }
+          table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+        th, td {
+          text-align: center;
+          padding: 10px;
+        }
+        .elment_de_menu{
+          font-size: larger;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          margin: 10px;
+          width: 200px;
+          height: 55px;
+          background-color: gray;
+          border-radius: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+        .entete{
+          width: 100%;
+          background-color: #5930ee;
+        }
+        .entete h1{
+          text-align: center;
+          justify-content: center;
+        }
+        .menu{
+          flex-wrap: wrap;
+          display: flex;
+          justify-content: center; 
+          align-items: center; 
+        }
+        .droite h1{
+          text-align: center;
+        }
+        /* Style pour les images dans la table */
+  table img {
+    max-width: 100px; /* Ajustez la largeur maximale selon vos besoins */
+    max-height: 100px; /* Ajustez la hauteur maximale selon vos besoins */
+    border-radius: 5px; /* Arrondir les coins des images */
+    display: block; /* Pour centrer les images dans leurs cellules */
+    margin: auto; /* Centrer les images horizontalement */
+  }
+  .bord-tableau h4{
+    margin-top: 30px;
+  }
+  

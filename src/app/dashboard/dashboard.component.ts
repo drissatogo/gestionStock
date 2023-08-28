@@ -14,4 +14,7 @@ this.redirection.navigateByUrl('dashboard');
   onReception(){
     this.redirection.navigateByUrl('reception');
 }
+// onEtat(){
+//   this.redirection.navigateByUrl('etat');
+// }
 }

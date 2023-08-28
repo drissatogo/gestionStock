@@ -1,15 +1,6 @@
-.Ma{
-  display: flex;
-}
-.gauche{
-  background-color: rgb(34, 33, 33);
-  left: 0%;
-  width: 30%;
-  justify-content: center;
-  align-items: center;
-}
+
 .droite{
-  width: 70%;
+  // width: 100%;
   justify-content: center;
 }
 .trie{
@@ -24,7 +15,8 @@
      }
      .bord-tableau{
          width: 220px;
-        height: 100px;  
+        height: 100px;
+        box-sizing: border-box;
        }
        
        .tableau{
@@ -41,33 +33,6 @@
         text-align: center;
         padding: 10px;
       }
-      .elment_de_menu{
-        font-size: larger;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        margin: 10px;
-        width: 200px;
-        height: 55px;
-        background-color: gray;
-        border-radius: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
-      .entete{
-        width: 100%;
-        background-color: #5930ee;
-      }
-      .entete h1{
-        text-align: center;
-        justify-content: center;
-      }
-      .menu{
-        flex-wrap: wrap;
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
-      }
       .droite h1{
         text-align: center;
       }
@@ -78,6 +43,7 @@ table img {
   border-radius: 5px; /* Arrondir les coins des images */
   display: block; /* Pour centrer les images dans leurs cellules */
   margin: auto; /* Centrer les images horizontalement */
+  box-sizing: border-box;
 }
 .bord-tableau h4{
   margin-top: 30px;

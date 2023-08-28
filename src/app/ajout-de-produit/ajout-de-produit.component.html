@@ -1,6 +1,19 @@
 <div class="ajout-produit">
-    <h2>Ajouter un produit</h2>
+   <div class="haut">
+    <button (click)="vershome()"><div><i class="fa-solid fa-arrow-left" style="justify-content: end;">
+      <a routerLink=""></a>
+  </i></div></button>
+      <h2>Ajouter un produit</h2>
+   </div>
     <form>
+      <div class="image">
+        <label for="photoInput">Photo</label>
+        <input type="file" id="photoInput" name="photo" (change)="handleFileInput($event)" required>
+        <img [src]="selectedImage" *ngIf="selectedImage" alt="Photo">
+      </div>
+      
+      <div class="ajout">
+        <div class="ajoutpart">
       <label for="nom">Nom du produit:</label>
       <input type="text" id="nom" name="nom" required><br><br>
   
@@ -10,13 +23,28 @@
         <option value="ordinateur">Ordinateur</option>
         <option value="scanner">Scanner</option>
       </select><br><br>
-  
       <label for="quantite">Quantité:</label>
       <input type="number" id="quantite" name="quantite" required><br><br>
   
       <label for="prix">Prix unitaire (F):</label>
       <input type="number" id="prix" name="prix" required><br><br>
+      </div>
+      <div class="ajoutpart">
+        <label for="nom">Nom du produit:</label>
+        <input type="text" id="nom" name="nom" required><br><br>
+      <label for="categorie">Catégorie:</label>
+      <select id="categorie" name="categorie">
+        <option value="telephone">Téléphone</option>
+        <option value="ordinateur">Ordinateur</option>
+        <option value="scanner">Scanner</option>
+      </select><br><br>
+      <label for="quantite">Quantité:</label>
+      <input type="number" id="quantite" name="quantite" required><br><br>
   
+      <label for="prix">Prix unitaire (F):</label>
+      <input type="number" id="prix" name="prix" required><br><br>
+    </div>
+    </div>
       <button type="submit">Ajouter</button>
     </form>
   </div>

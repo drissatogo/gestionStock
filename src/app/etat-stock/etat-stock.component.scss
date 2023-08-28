@@ -6,6 +6,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+    margin-top: 20px;
   }
   .tableau{
     display: flex;
@@ -22,6 +23,19 @@
   th, td {
   text-align: center;
   padding: 10px;
+  }
+  .tabettri{
+    border-radius: 20px;
+    height: 60%;
+    border-top:10px solid rgb(6, 75, 54);;
+
+  }
+  table img {
+    max-width: 100px; /* Ajustez la largeur maximale selon vos besoins */
+    max-height: 100px; /* Ajustez la hauteur maximale selon vos besoins */
+    border-radius: 5px; /* Arrondir les coins des images */
+    display: block; /* Pour centrer les images dans leurs cellules */
+    margin: auto; /* Centrer les images horizontalement */
   }
   
   
