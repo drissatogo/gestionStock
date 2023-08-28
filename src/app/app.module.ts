@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -9,13 +9,17 @@ import { EtatStockComponent } from './etat-stock/etat-stock.component';
 import { AjoutDeProduitComponent } from './ajout-de-produit/ajout-de-produit.component';
 import { ExpeditionComponent } from './expedition/expedition.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { PageLoginComponent } from './pages/page-login/page-login.component';
+import { PageInscriptionComponent } from './pages/page-inscription/page-inscription.component';
 
 const routes:Routes=[
   {path:'dashboard',component:DashboardComponent},
   {path:'reception',component:ReceptionComponent},
   {path:'etat',component:EtatStockComponent},
   {path:'ajoutProduit',component:AjoutDeProduitComponent},
-  {path:'gohome',component:DashboardComponent}
+  {path:'gohome',component:DashboardComponent},
+  {path:'login',component:PageLoginComponent},
+  {path:'inscrire',component:PageInscriptionComponent},
 ]
 
 @NgModule({
@@ -26,7 +30,9 @@ const routes:Routes=[
     EtatStockComponent,
     AjoutDeProduitComponent,
     ExpeditionComponent,
-    AccueilComponent
+    AccueilComponent,
+    PageLoginComponent,
+    PageInscriptionComponent,
   ],
   imports: [
     BrowserModule,
