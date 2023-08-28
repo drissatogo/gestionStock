@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-dashboard',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
-
+  constructor(private redirection:Router){}
+  onDashboard(){
+this.redirection.navigateByUrl('dashboard');
+  }
+  onReception(){
+    this.redirection.navigateByUrl('reception');
+}
 }

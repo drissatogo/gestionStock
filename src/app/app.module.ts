@@ -10,11 +10,11 @@ import { AjoutDeProduitComponent } from './ajout-de-produit/ajout-de-produit.com
 import { ExpeditionComponent } from './expedition/expedition.component';
 
 const routes:Routes=[
-  {path:'dashboard',component:DashboardComponent},
-  {path:'reception',component:ReceptionComponent},
-  {path:'etat',component:EtatStockComponent},
-  {path:'ajoutProduit',component:AjoutDeProduitComponent},
-  {path:'gohome',component:DashboardComponent}
+  // {path:'dashboard',component:DashboardComponent},
+  // {path:'reception',component:ReceptionComponent},
+  // {path:'etat',component:EtatStockComponent},
+  // {path:'ajoutProduit',component:AjoutDeProduitComponent},
+  // {path:'gohome',component:DashboardComponent}
 ]
 
 @NgModule({
