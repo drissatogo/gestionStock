@@ -23,4 +23,17 @@ th, td {
 text-align: center;
 padding: 10px;
 }
+.tr img{
+  max-width: 100px; /* Ajustez la largeur maximale selon vos besoins */
+    max-height: 100px; /* Ajustez la hauteur maximale selon vos besoins */
+    border-radius: 5px; /* Arrondir les coins des images */
+    display: block; /* Pour centrer les images dans leurs cellules */
+    margin: auto;
+}
+.plus{
+  display: flex;
+ 
+  width: 30%;
+  cursor: pointer;
+}
 
