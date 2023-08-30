@@ -14,8 +14,12 @@ throw new Error('Method not implemented.');
 modifierProduit(_t41: any) {
 throw new Error('Method not implemented.');
 }
-supprimerProduit(_t41: any) {
-throw new Error('Method not implemented.');
+supprimerProduit(produit:any): void{
+  const confirmation = confirm(`Voulez-vous vraiment supprimer "${produit.nom}" du stock ?`);
+  if (confirmation) {
+  this.produitService.supprimerProduit(produit);
+  this.produits = this.produitService.getProduits();
+}
 }
   produits: any[] = [];
 

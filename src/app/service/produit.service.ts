@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ProduitService {
+
   getProduitById(id: number): any {
     return this.produits.find(prod => prod.id === id);
   }
@@ -26,6 +27,12 @@ export class ProduitService {
     const index = this.produits.findIndex(prod => prod.id === selectedProduit.id);
     if (index !== -1) {
       this.produits[index] = selectedProduit;
+    }
+  }
+  supprimerProduit(produit: any): void {
+    const index = this.produits.indexOf(produit);
+    if (index !== -1) {
+      this.produits.splice(index, 1);
     }
   }
 }
