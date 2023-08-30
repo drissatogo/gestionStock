@@ -12,6 +12,7 @@ import { ExpeditionComponent } from './expedition/expedition.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { PageLoginComponent } from './pages/page-login/page-login.component';
 import { PageInscriptionComponent } from './pages/page-inscription/page-inscription.component';
+import { DetailProduitComponent } from './detail-produit/detail-produit.component';
 
 const routes:Routes=[
   {path:'dashboard',component:DashboardComponent},
@@ -22,6 +23,7 @@ const routes:Routes=[
   {path:'login',component:PageLoginComponent},
   {path:'inscrire',component:PageInscriptionComponent},
   {path:'expedition',component:ExpeditionComponent},
+  {path:'detail', component: DetailProduitComponent },
 ]
 
 @NgModule({
@@ -35,6 +37,7 @@ const routes:Routes=[
     AccueilComponent,
     PageLoginComponent,
     PageInscriptionComponent,
+    DetailProduitComponent,
   ],
   imports: [
     FormsModule,

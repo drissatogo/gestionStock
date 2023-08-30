@@ -4,6 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ProduitService {
+  getProduitById(id: number): any {
+    return this.produits.find(prod => prod.id === id);
+  }
   produits: any[] = []; // Tableau de produits
 
   constructor() { }

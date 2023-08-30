@@ -25,5 +25,8 @@ onExpedition(){
 onCategories(){
   this.redirection.navigateByUrl('categories')
 }
+afficherDetails(){
+  this.redirection.navigateByUrl('detail')
+}
 }
 

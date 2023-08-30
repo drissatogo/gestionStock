@@ -8,6 +8,9 @@ import { ProduitService } from '../service/produit.service';
   styleUrls: ['./etat-stock.component.scss']
 })
 export class EtatStockComponent implements OnInit{
+afficherDetails(_t41: any) {
+throw new Error('Method not implemented.');
+}
 modifierProduit(_t41: any) {
 throw new Error('Method not implemented.');
 }
