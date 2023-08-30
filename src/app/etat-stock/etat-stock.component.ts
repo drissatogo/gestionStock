@@ -9,19 +9,51 @@ import { ProduitService } from '../service/produit.service';
 })
 export class EtatStockComponent implements OnInit{
   produits: any[] = [];
+  router: any;
+  produit: any; 
+  route:any;
+  
 
-  constructor(private produitService : ProduitService, private gohome: Router) {}
+  constructor(private produitService : ProduitService,
+             private gohome: Router,
+             private versmodifier:Router) {}
   ngOnInit(): void {
     this.produits = this.produitService.getProduit();
+    const id = this.route.snapshot.paramMap.get('id');
+    this.produit = this.produitService.getProduitById();
+    this.chargerProduits();
   }
+ 
 
   vershome() {
     this.gohome.navigateByUrl('gohome');
   }
+  modifier(id : number): void{
+    this.versmodifier.navigateByUrl('versmodifier/'+id);
+  }
+
+  supprimerProduit(produit:any): void{
+    this.produitService.supprimerProduit(produit);
+    this.produits = this.produitService.getProduit();
+  }
+
+ chargerProduits(): void {
+    this.produitService.getProduitById().subscribe( (produits: any[]) => {
+      this.produits = produits;
+    });
+  }
+
+  modifierProduit(produit: any): void {
+    this.router.navigate(['/modification-produit', produit.id]);
+  }
 
   // Cette méthode ajoute un produit à la liste des produits
-  ajouterProduit(nom: string, categorie: string, quantite: number, prix: number, image: string) {
+  ajouterProduit(id:number,fournisseur:string,entrepot:string,date_de_reception:Date,nom: string, categorie: string, quantite: number, prix: number, image: string) {
     const nouveauProduit = {
+      id,
+      fournisseur,
+      entrepot,
+      date_de_reception,
       nom,
       categorie,
       quantite,

@@ -20,7 +20,10 @@ export class AppModule { }
   styleUrls: ['./ajout-de-produit.component.scss']
 })
 export class AjoutDeProduitComponent {
-  
+  id: number = 0;
+  fournisseur: string = '';
+  entrepot: string = '';
+  date_de_reception: Date = new Date();
   nom: string = '';
   categorie: string = '';
   quantite: number = 0;
@@ -30,6 +33,10 @@ export class AjoutDeProduitComponent {
   // Méthode pour ajouter un produit à la liste
   ajouterProduit(): void {
     const nouveauProduit = {
+      id:this.id,
+      fournisseur:this.fournisseur,
+      entrepot:this.entrepot,
+      date_de_reception:this.date_de_reception,
       nom:this.nom,
       categorie:this.categorie,
       quantite:this.quantite,
@@ -44,8 +51,8 @@ export class AjoutDeProduitComponent {
   }
   
   // constructor(private router:Router){}
-  vershome(){
-    this.router.navigateByUrl('gohome')
+  versetat(){
+    this.router.navigateByUrl('versetat')
   }
   // selectedImage: any;
 

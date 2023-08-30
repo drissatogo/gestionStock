@@ -1,6 +1,6 @@
 <div class="ajout-produit">
    <div class="haut">
-    <button (click)="vershome()"><div><i class="fa-solid fa-arrow-left" style="justify-content: end;">
+    <button (click)="versetat()"><div><i class="fa-solid fa-arrow-left" style="justify-content: end;">
       <a routerLink=""></a>
   </i></div></button>
       <h2>Ajouter un produit</h2>
@@ -12,24 +12,42 @@
       <img [src]="selectedImage" *ngIf="selectedImage" alt="Photo">
     </div>
 
-    <div class="ajout">
-      <div class="ajoutpart">
-        <label for="nom">Nom du produit:</label>
-        <input type="text" id="nom" name="nom" [(ngModel)]="nom" required><br><br>
+  <div class="ajout">
+    <div class="ajoutpart">
+      <div class="colonne">
+        
+        <label for="id">Id</label>
+        <input type="number" id="id" name="id" [(ngModel)]="id" required><br><br>
 
-        <label for="categorie">Catégorie:</label>
-        <select id="categorie" name="categorie" [(ngModel)]="categorie">
-          <option value="telephone">Téléphone</option>
-          <option value="ordinateur">Ordinateur</option>
-          <option value="scanner">Scanner</option>
-        </select><br><br>
-        <label for="quantite">Quantité:</label>
-        <input type="number" id="quantite" name="quantite" [(ngModel)]="quantite" required><br><br>
+        <label for="fournisseur">Fournisseur</label>
+        <input type="text" id="fournisseur" name="fournisseur" [(ngModel)]="fournisseur" required><br><br>
 
-        <label for="prix">Prix unitaire (F):</label>
-        <input type="number" id="prix" name="prix" [(ngModel)]="prix" required><br><br>
+        <label for="entrepot">Entrepôt</label>
+        <input type="text" id="entrepot" name="entrepot" [(ngModel)]="entrepot" required><br><br>
+
+        <label for="date_de_reception">Date de reception</label>
+        <input type="date" id="date_de_reception" name="date_de_reception" [(ngModel)]="date_de_reception" required="nom">
       </div>
+        
+     <div class="colonne">
+      <label for="nom">Nom du produit:</label>
+      <input type="text" id="nom" name="nom" [(ngModel)]="nom" required><br><br>
+
+      <label for="categorie">Catégorie:</label>
+      <select id="categorie" name="categorie" [(ngModel)]="categorie">
+        <option value="telephone">Téléphone</option>
+        <option value="ordinateur">Ordinateur</option>
+        <option value="scanner">Scanner</option>
+      </select><br><br>
+      <label for="quantite">Quantité:</label>
+      <input type="number" id="quantite" name="quantite" [(ngModel)]="quantite" required><br><br>
+
+      <label for="prix">Prix unitaire (F):</label>
+      <input type="number" id="prix" name="prix" [(ngModel)]="prix" required><br><br>
+     </div>
     </div>
+  </div>
+    
     <button type="submit">Ajouter</button>
   </form>
   </div>

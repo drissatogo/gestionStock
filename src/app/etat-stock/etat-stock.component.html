@@ -84,6 +84,10 @@
     <thead>
       <tr>
         <th>Image</th>
+        <th>Id</th>
+        <th>Fournisseur</th>
+        <th>Entrepôt</th>
+        <th>Date de reception</th>
         <th>Nom du Produit</th>
         <th>Categorie</th>
         <th>Quantité</th>
@@ -96,13 +100,18 @@
     <tbody>
       <tr *ngFor="let produit of produits">
         <td><img [src]="produit.image" alt=""></td>
+        <td>{{ produit.id }}</td>
+        <td>{{ produit.fournisseur}}</td>
+        <td>{{ produit.entrepot }}</td>
+        <td>{{ produit.date_de_reception }}</td> 
         <td>{{ produit.nom }}</td>
         <td>{{ produit.categorie }}</td>
         <td>{{ produit.quantite }}</td>
         <td>{{ produit.prix }}</td> 
         <td>
-            <span style="margin-right: auto;" [innerHTML]="produit.iconeModification"></span>
-            <span style=" margin-left: auto;" [innerHTML]="produit.iconeSuppression"></span>
+            <span style="margin-right: auto;"  (click)="modifier(produit.id)" [innerHTML]="produit.iconeModification"></span>
+            <span style=" margin-left: auto;"  (click)="supprimerProduit(produit)" [innerHTML]="produit.iconeSuppression"></span>
+            <!-- (click)="modifierProduit(produit)" -->
         </td>
       </tr>
     </tbody>

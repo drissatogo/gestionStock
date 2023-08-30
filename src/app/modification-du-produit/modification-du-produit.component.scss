@@ -1,4 +1,5 @@
-.ajout-produit {
+
+  form{
     background-color: #f2f2f2;
     padding: 20px;
     border-radius: 10px;
@@ -7,11 +8,6 @@
     margin-left: 5%;
     margin-top: 40px;
     margin-bottom: 40px;
-  }
-  
-  
-  .ajout-produit h2 {
-    text-align: start;
   }
   form label {
     display: block;
@@ -35,53 +31,42 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%;
+    width: 50%;
+    margin-left: 20%;
   }
   
-  form button {
-    background-color: #0056b3;
-    justify-content: center;
-    width: 48%;
-    margin-left: 23%;
+  .update{
+   
   }
-  .ajout{
-    width: 100%;
-    justify-content: center;
-  }
-  
-  .ajoutpart{
-    width: 90%;
+  .updatepart{ 
     display: flex;
+    width: 100%;
     justify-content: space-between;
-    margin-left: 5%;
     
   }
 
-  .ajoutpart.image {
+  .updatepart.image {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
   }
   
-  .ajoutpart.image input[type="file"] {
+  .updatepart.image input[type="file"] {
     display: none;
   }
   
-  .ajoutpart.image label {
+  .updatepart.image label {
     cursor: pointer;
     margin-bottom: 10px;
   }
   
-  .ajoutpart.image img {
+  .updatepart.image img {
     max-width: 100%;
     margin-top: 10px;
-  }
-  .haut{
-    display: flex;
-    justify-content: space-between;
   }
   .colonne{
     width: 45%;
   }
+  
   

@@ -10,13 +10,16 @@ import { EtatStockComponent } from './etat-stock/etat-stock.component';
 import { AjoutDeProduitComponent } from './ajout-de-produit/ajout-de-produit.component';
 import { ExpeditionComponent } from './expedition/expedition.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { ModificationDuProduitComponent } from './modification-du-produit/modification-du-produit.component';
 
 const routes:Routes=[
   {path:'dashboard',component:DashboardComponent},
-  {path:'reception',component:ReceptionComponent},
+  {path:'reception',component:AjoutDeProduitComponent},
   {path:'etat',component:EtatStockComponent},
   {path:'ajoutProduit',component:AjoutDeProduitComponent},
-  {path:'gohome',component:DashboardComponent}
+  {path:'gohome',component:DashboardComponent},
+  {path:'versmodifier/:id',component:ModificationDuProduitComponent},
+  {path:'versetat', component:EtatStockComponent}
 ]
 
 @NgModule({
@@ -27,7 +30,8 @@ const routes:Routes=[
     EtatStockComponent,
     AjoutDeProduitComponent,
     ExpeditionComponent,
-    AccueilComponent
+    AccueilComponent,
+    ModificationDuProduitComponent
   ],
   imports: [
     FormsModule,
