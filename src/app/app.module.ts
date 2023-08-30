@@ -19,7 +19,8 @@ const routes:Routes=[
   {path:'ajoutProduit',component:AjoutDeProduitComponent},
   {path:'gohome',component:DashboardComponent},
   {path:'versmodifier/:id',component:ModificationDuProduitComponent},
-  {path:'versetat', component:EtatStockComponent}
+  {path:'versetat', component:EtatStockComponent},
+  
 ]
 
 @NgModule({

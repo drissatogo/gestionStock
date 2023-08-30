@@ -20,8 +20,7 @@ export class EtatStockComponent implements OnInit{
   ngOnInit(): void {
     this.produits = this.produitService.getProduit();
     const id = this.route.snapshot.paramMap.get('id');
-    this.produit = this.produitService.getProduitById();
-    this.chargerProduits();
+    
   }
  
 
@@ -37,14 +36,10 @@ export class EtatStockComponent implements OnInit{
     this.produits = this.produitService.getProduit();
   }
 
- chargerProduits(): void {
-    this.produitService.getProduitById().subscribe( (produits: any[]) => {
-      this.produits = produits;
-    });
-  }
-
-  modifierProduit(produit: any): void {
-    this.router.navigate(['/modification-produit', produit.id]);
+  modifierProduit(produit:any): void{
+    this.versmodifier.navigateByUrl('versmodifier/', produit);
+    this.produitService.modifierProduit(this.produit);
+    
   }
 
   // Cette méthode ajoute un produit à la liste des produits
