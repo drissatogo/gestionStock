@@ -109,9 +109,8 @@
         <td>{{ produit.quantite }}</td>
         <td>{{ produit.prix }}</td> 
         <td>
-            <span style="margin-right: auto;"  (click)="modifierProduit(produit.id)" [innerHTML]="produit.iconeModification"></span>
+            <span style="margin-right: auto;"  (click)="modifierProduit(produit)" [innerHTML]="produit.iconeModification"></span>
             <span style=" margin-left: auto;"  (click)="supprimerProduit(produit)" [innerHTML]="produit.iconeSuppression"></span>
-            <!-- (click)="modifierProduit(produit)" -->
         </td>
       </tr>
     </tbody>

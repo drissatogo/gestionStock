@@ -27,9 +27,9 @@ export class EtatStockComponent implements OnInit{
   vershome() {
     this.gohome.navigateByUrl('gohome');
   }
-  modifier(id : number): void{
-    this.versmodifier.navigateByUrl('versmodifier/'+id);
-  }
+  // modifier(id : number): void{
+  //   this.versmodifier.navigateByUrl('versmodifier'+id);
+  // }
 
   supprimerProduit(produit:any): void{
     this.produitService.supprimerProduit(produit);
@@ -37,8 +37,8 @@ export class EtatStockComponent implements OnInit{
   }
 
   modifierProduit(produit:any): void{
-    this.versmodifier.navigateByUrl('versmodifier/', produit);
-    this.produitService.modifierProduit(this.produit);
+    this.produitService.modifierProduit(produit);
+    this.versmodifier.navigateByUrl('versmodifier/'+produit.id);
     
   }
 

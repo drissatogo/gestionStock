@@ -1,4 +1,4 @@
-<form *ngFor=" let p of produit"  >
+<form   >
     <div class="image">
       <label for="photoInput">Photo</label>
       <input type="file" id="photoInput" name="photo"  required >
@@ -10,37 +10,36 @@
 
         <div class="colonne">
             <label for="id">Id</label>
-        <input type="number" id="id" name="id" [(ngModel)]="id" required value="{{p.id}}"><br><br>
+        <input type="number" id="id" name="id" [(ngModel)]="produit.id" required value=""><br><br>
 
         <label for="fournisseur">Fournisseur</label>
-        <input type="text" id="fournisseur" name="fournisseur" [(ngModel)]="fournisseur" required value="{{p.fournisseur}}"><br><br>
+        <input type="text" id="fournisseur" name="fournisseur" [(ngModel)]="produit.fournisseur" required value=""><br><br>
 
         <label for="entrepot">Entrepôt</label>
-        <input type="text" id="entrepot" name="entrepot" [(ngModel)]="entrepot" required value="{{p.entrepot}}"><br><br>
+        <input type="text" id="entrepot" name="entrepot" [(ngModel)]="produit.entrepot" required value=""><br><br>
 
         <label for="date_de_reception">Date de reception</label>
-        <input type="date" id="date_de_reception" name="date_de_reception" [(ngModel)]="date_de_reception" required value="{{p.date_de_reception}}">
+        <input type="date" id="date_de_reception" name="date_de_reception" [(ngModel)]="produit.date_de_reception" required value="">
         </div>
         
    <div class="colonne">
     
     <label for="nom">Nom du produit:</label >
-    <input type="text" id="nom" name="nom" [(ngModel)]="nom" required value=""><br><br>
+    <input type="text" id="nom" name="nom" [(ngModel)]="produit.nom" required ><br><br>
 
     <label for="categorie">Catégorie:</label>
-    <select id="categorie" name="categorie" [(ngModel)]="categorie" required value="{{p.categorie}}" >
+    <select id="categorie" name="categorie" [(ngModel)]="produit.categorie" required value="" >
       <option value="telephone">Téléphone</option>
       <option value="ordinateur">Ordinateur</option>
       <option value="scanner">Scanner</option>
     </select><br><br>
 
     <label for="quantite">Quantité:</label>
-    <input type="number" id="quantite" name="quantite" [(ngModel)]="quantite" required value="quantite"><br><br>
+    <input type="number" id="quantite" name="quantite" [(ngModel)]="produit.quantite" required value=""><br><br>
 
     <label for="prix">Prix unitaire (F):</label>
-    <input type="number" id="prix" name="prix" [(ngModel)]="prix" required ><br><br>
+    <input type="number" id="prix" name="prix" [(ngModel)]="produit.prix" required value="" ><br><br>
    </div>
  </div>
-    
-    <button type="submit">Modifier</button>
+    <button type="submit" >  Modifier</button>
   </form>
