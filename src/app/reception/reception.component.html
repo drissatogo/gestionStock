@@ -3,15 +3,25 @@
     <div style="display: flex;">
       
       <label for="nom">Trier par:</label><br>
-      <select name="" id=""><input type="text" id="nom" name="nom" required><br><br></select>
+      <select name="" id=""><input type="text" id="nom" name="nom" required>
+        <option >Quantité</option>
+        <option >Categorie</option>
+        <option >Nom du Produit</option></select>
     </div>
     <div>
       <input type="text" id="searchInput" placeholder="Rechercher...">
     </div>
 </div><br><br>
-   <button (click)="ajouterproduit()"><div><i  class="fa-solid fa-plus" style="justify-content: end;">
-    <a routerLink="/ajoutProduit"></a>
-</i></div></button>
+   
+    <div  (click)="ajouterproduit()" class="plus">
+        <div><i  class="fa-solid fa-plus fa-2x" style="margin-top: 10%;">
+            <a routerLink="/ajoutProduit"></a></i>
+          </div>
+          <div>
+            <h3>Ajouter les produits</h3>
+          </div>
+    </div>
+
    <div class="tableau">
     <table id="table">
       <thead>
@@ -24,22 +34,22 @@
           </tr>
       </thead>
       <tbody>
-          <tr>
-              <td><img src="gestionStock\src\assets\Capture d'écran 2023-08-23 125416.png" alt=""></td>
+          <tr class="tr">
+              <td><img src="../../assets/Iphone.png" alt=""></td>
               <td> Iphone X</td>
               <td>Téléphone</td>
               <td>60</td>
               <td>150 000 F</td>
           </tr>
-          <tr>
-              <td><img src="C:\Users\togo.drissa\Pictures\Screenshots\Capture d'écran 2023-08-23 130052.png" alt=""></td>
+          <tr class="tr">
+              <td><img src="../../assets/Hp.png" alt=""></td>
               <td>Hp Pavillon </td>
               <td>Ordinateur</td>
               <td>30</td>
               <td>270 000 F</td>
           </tr>
-          <tr>
-              <td><img src= "C:\Users\togo.drissa\Pictures\Screenshots\Capture d'écran 2023-08-23 130237.png" alt=""></td>
+          <tr class="tr">
+              <td><img src= "../../assets/Imprimante.png" alt=""></td>
               <td>Hp Imprimante </td>
               <td>Scanner</td>
               <td>20</td>

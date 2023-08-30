@@ -1,2 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@fortawesome/fontawesome-free/css/all.css';
+/* detail-produit.component.css */
+
+.detail-container {
+    /* ... autres styles ... */
+    transition: transform 0.3s ease;
+  }
+  
+  .detail-container:hover {
+    transform: scale(1.05);
+  }
+  

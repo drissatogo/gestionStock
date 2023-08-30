@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms'; 
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -20,6 +21,7 @@ const routes:Routes=[
   {path:'gohome',component:DashboardComponent},
   {path:'login',component:PageLoginComponent},
   {path:'inscrire',component:PageInscriptionComponent},
+  {path:'expedition',component:ExpeditionComponent},
 ]
 
 @NgModule({
@@ -35,6 +37,7 @@ const routes:Routes=[
     PageInscriptionComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     RouterModule.forRoot(routes)
   ],

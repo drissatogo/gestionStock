@@ -5,7 +5,10 @@
     <div style="display: flex;">
       
       <label for="nom">Trier par:</label><br>
-      <select name="" id=""><input type="text" id="nom" name="nom" required><br><br></select>
+      <select name="" id=""><input type="text" id="nom" name="nom" required>
+        <option >Quantité</option>
+        <option >Categorie</option>
+        <option >Nom du Produit</option></select>
     </div>
     <div>
       <input type="text" id="searchInput" placeholder="Rechercher...">
@@ -14,7 +17,7 @@
    <button (click)="vershome()"><div><i class="fa-solid fa-arrow-left" style="justify-content: end;">
     <a routerLink=""></a>
 </i></div></button>
-   <div class="tableau">
+   <!-- <div class="tableau">
     <table id="table">
       <thead>
           <tr>
@@ -50,5 +53,63 @@
       </tbody>
   </table>
    </div>
+
+
+   <div class="tableau">
+    <table id="table">
+       <thead>
+        <tr>
+          <th>Image</th>
+          <th>Nom du Produit</th>
+          <th>Categorie</th>
+          <th>Quantité</th>
+          <th>Prix.U(F)</th>
+        </tr>
+      </thead> -->
+      <!-- <tbody>
+        <tr *ngFor="let produit of produits">
+          <td><img [src]="produit.image" alt=""></td>
+          <td>{{ produit.nom }}</td>
+          <td>{{ produit.categorie }}</td>
+          <td>{{ produit.quantite }}</td>
+          <td>{{ produit.prix }}</td>
+        </tr>
+      </tbody> 
+    </table>
+  </div> -->
+
+
+  <div class="tableau">
+  <table id="table">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Nom du Produit</th>
+        <th>Categorie</th>
+        <th>Quantité</th>
+        <th>Prix.U(F)</th>
+        <th>Action</th>
+        
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let produit of produits">
+        <td><img [src]="produit.image" alt=""></td>
+        <td>{{ produit.nom }}</td>
+        <td>{{ produit.categorie }}</td>
+        <td>{{ produit.quantite }}</td>
+        <td>{{ produit.prix }}</td> 
+        <td>
+          <td>
+            <button class="action-button" (click)="modifierProduit(produit)"><i class="fa-solid fa-pen-to-square"></i></button>
+            <button class="action-button" (click)="supprimerProduit(produit)"><i class="fa-solid fa-trash"></i></button>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
 </div>
 </div>
