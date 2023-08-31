@@ -4,6 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ProduitService {
+  modifierProduit(id: any) {
+    throw new Error('Method not implemented.');
+  }
 
   getProduitById(id: number): any {
     return this.produits.find(prod => prod.id === id);
