@@ -8,18 +8,42 @@ import { Produit } from '../produit';
   providedIn: 'root'
 })
 export class ProduitService {
+  ajouterProduit(produit: any) {
+    throw new Error('Method not implemented.');
+  }
  
   private produit: any[] = [
    
   ];
+  private lastProduitId: number = 0;
+  private saveProduitsToLocal() {
+    localStorage.setItem('produit', JSON.stringify(this.produit));
+  }
+
+  private loadProduitsFromLocal() {
+    const storedProduit = localStorage.getItem('produit');
+    if (storedProduit) {
+      this.produit = JSON.parse(storedProduit);
+    }
+  }
   
 
   getProduit(){
     return this.produit;
+    this.loadProduitFromLocal();
+  }
+  loadProduitFromLocal() {
+    throw new Error('Method not implemented.');
   }
 
-  addProduit(prod : any){
-    this.produit.push(prod);
+  addProduit(produit : any){
+    this.lastProduitId = Number(this.lastProduitId) + 1;
+    produit.id = this.lastProduitId;
+    this.produit.push(produit);
+    this.saveProduitToLocal();
+  }
+  saveProduitToLocal() {
+    throw new Error('Method not implemented.');
   }
   
 

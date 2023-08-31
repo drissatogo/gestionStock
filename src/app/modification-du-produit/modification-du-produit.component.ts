@@ -24,8 +24,8 @@ export class ModificationDuProduitComponent implements OnInit {
   produitId: number | any;
   
   produit! : Produit;
-  versetat: any;
-  constructor(private router: Router, private produitService: ProduitService, private route : ActivatedRoute){}
+
+  constructor(private router: Router, private produitService: ProduitService,  private versetat: Router, private route : ActivatedRoute){}
      
   ngOnInit() {
     this.route.paramMap.subscribe(params=>{
@@ -39,6 +39,6 @@ export class ModificationDuProduitComponent implements OnInit {
   onSubmit() {
     this.produitService.modifierProduit(this.produit);
     // Redirige vers la liste des produits.
-    this.versetat.navigateByUrl('versetat');
+    this.versetat.navigateByUrl('/etat');
   }
 }

@@ -36,7 +36,7 @@ export class EtatStockComponent implements OnInit{
     this.produits = this.produitService.getProduit();
   }
 
-  modifierProduit(produit:any): void{
+  moproduit(produit:any): void{
     this.produitService.modifierProduit(produit);
     this.versmodifier.navigateByUrl('versmodifier/'+produit.id);
     

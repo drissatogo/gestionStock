@@ -20,6 +20,7 @@ const routes:Routes=[
   {path:'gohome',component:DashboardComponent},
   {path:'versmodifier/:id',component:ModificationDuProduitComponent},
   {path:'versetat', component:EtatStockComponent},
+  {path:'stock', component:EtatStockComponent}
   
 ]
 
