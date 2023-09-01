@@ -8,19 +8,15 @@ import { Produit } from '../produit';
   providedIn: 'root'
 })
 export class ProduitService {
-  ajouterProduit(produit: any) {
-    throw new Error('Method not implemented.');
-  }
+
  
-  private produit: any[] = [
-   
-  ];
+  private produit: any[] = [ ];
   private lastProduitId: number = 0;
-  private saveProduitsToLocal() {
+  private saveProduitToLocal() {
     localStorage.setItem('produit', JSON.stringify(this.produit));
   }
 
-  private loadProduitsFromLocal() {
+  private loadProduitFromLocal() {
     const storedProduit = localStorage.getItem('produit');
     if (storedProduit) {
       this.produit = JSON.parse(storedProduit);
@@ -32,9 +28,7 @@ export class ProduitService {
     return this.produit;
     this.loadProduitFromLocal();
   }
-  loadProduitFromLocal() {
-    throw new Error('Method not implemented.');
-  }
+ 
 
   addProduit(produit : any){
     this.lastProduitId = Number(this.lastProduitId) + 1;
@@ -42,9 +36,7 @@ export class ProduitService {
     this.produit.push(produit);
     this.saveProduitToLocal();
   }
-  saveProduitToLocal() {
-    throw new Error('Method not implemented.');
-  }
+ 
   
 
   supprimerProduit(produit: any): void {
@@ -70,14 +62,5 @@ export class ProduitService {
     }
   }
   
-  
-//  modifierProduit(produit:any): void{
-//    const index = this.produit.findIndex(p => p.id === produit.id);
-
-//   // Si l'indice est trouvé, mettez à jour le produit
-//   if (index !== -1) {
-//     this.produit[index] = produit;
-// }
-// }
  
 }

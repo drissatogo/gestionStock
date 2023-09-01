@@ -19,5 +19,14 @@ this.redirection.navigateByUrl('dashboard');
 onEtatStock(){
   this.redirection.navigateByUrl('etat')
 }
+onExpedition(){
+  this.redirection.navigateByUrl('expedition')
+}
+onClient(){
+  this.redirection.navigateByUrl('client')
+}
+pourAjouterClient(){
+  this.redirection.navigateByUrl('addcustom')
+}
 }
 

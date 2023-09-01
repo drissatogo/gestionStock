@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms'; 
 
@@ -11,6 +11,8 @@ import { AjoutDeProduitComponent } from './ajout-de-produit/ajout-de-produit.com
 import { ExpeditionComponent } from './expedition/expedition.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { ModificationDuProduitComponent } from './modification-du-produit/modification-du-produit.component';
+import { AjoutClientComponent } from './ajout-client/ajout-client.component';
+import { ListeClientComponent } from './liste-client/liste-client.component';
 
 const routes:Routes=[
   {path:'dashboard',component:DashboardComponent},
@@ -20,7 +22,10 @@ const routes:Routes=[
   {path:'gohome',component:DashboardComponent},
   {path:'versmodifier/:id',component:ModificationDuProduitComponent},
   {path:'versetat', component:EtatStockComponent},
-  {path:'stock', component:EtatStockComponent}
+  {path:'stock', component:EtatStockComponent},
+  {path:'expedition',component:ExpeditionComponent},
+  {path:'client', component:ListeClientComponent},
+  {path:'addcustom', component:AjoutClientComponent}
   
 ]
 
@@ -33,7 +38,9 @@ const routes:Routes=[
     AjoutDeProduitComponent,
     ExpeditionComponent,
     AccueilComponent,
-    ModificationDuProduitComponent
+    ModificationDuProduitComponent,
+    AjoutClientComponent,
+    ListeClientComponent
   ],
   imports: [
     FormsModule,

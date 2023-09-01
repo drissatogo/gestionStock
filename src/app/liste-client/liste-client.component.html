@@ -1,0 +1,54 @@
+<div class="reception">
+    <h1>Liste des Clients</h1>
+    <div class="tabettri">
+    <div class="tri">
+    <div style="display: flex;">
+      
+      <label for="nom">Trier par:</label><br>
+      <select name="" id=""><input type="text" id="nom" name="nom" required>
+        <option >Quantité</option>
+        <option >Categorie</option>
+        <option >Nom du Produit</option></select>
+    </div>
+    <div>
+      <input type="text" id="searchInput" placeholder="Rechercher...">
+    </div>
+</div><br><br>
+   <i (click)="pourAjouterClient()" class="fa-solid fa-arrow-left" style="justify-content: end;"></i>
+  
+
+
+  <div class="tableau">
+  <table id="table">
+    <thead>
+      <tr>
+       
+        <th>IdClient</th>
+        <th>Nom </th>
+        <th>telephone</th>
+        <th>Email</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let client of clients ">
+        
+        <td>{{ client.id }}</td>
+        <td>{{ client.nom }}</td>
+        <td>{{ client.telephone}}</td>
+        <td>{{ client.email }}</td>
+        
+
+        <td>
+            <span style="margin-right: auto;"   [innerHTML]="client.iconeModification"></span>
+            <span style=" margin-left: auto;"   [innerHTML]="client.iconeSuppression"></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  
+</div>
+</div>
+

@@ -1,1 +1,23 @@
-<p>expedition works!</p>
+<div class="expedition-container">
+    <h2>Expédition de Produit</h2>
+    <form (ngSubmit)="expedierProduit()" #expeditionForm="ngForm">
+      <div class="form-group">
+        <label for="produit">Produit:</label>
+        <select id="produit" name="produit" [(ngModel)]="selectedProduitId" required>
+            <option value="telephone">Téléphone</option>
+        <option value="ordinateur">Ordinateur</option>
+        <option value="scanner">Scanner</option>
+          <option *ngFor="let produit of produits" [value]="produit.id">{{ produit.nom }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="quantite">Quantité:</label>
+        <input type="number" id="quantite" name="quantite" [(ngModel)]="quantite" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" [(ngModel)]="description" rows="3"></textarea>
+      </div>
+      <button type="submit" [disabled]="!expeditionForm.valid">Expédier</button>
+    </form>
+  </div>
