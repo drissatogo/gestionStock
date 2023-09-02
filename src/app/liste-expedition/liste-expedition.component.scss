@@ -1,6 +1,7 @@
-.reception{
+.expedition{
     justify-content: start;
     width: 100%;
+    cursor: pointer;
   }
   .tri{
     display: flex;
@@ -16,9 +17,10 @@
   }
   table {
     border-collapse: collapse;
-    width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 20%;
+    width: 99%;
+    border: 2px solid rgb(6, 75, 54);
+    border-radius: 20px;
+    margin-left: 5px;
   }
   th, td {
   text-align: center;
@@ -27,19 +29,17 @@
   .tabettri{
     border-radius: 20px;
     height: 60%;
-    border-top:10px solid rgb(6, 75, 54);
+    border-top:10px solid rgb(6, 75, 54);;
     cursor: pointer;
   }
   table img {
-    max-width: 100px; /* Ajustez la largeur maximale selon vos besoins */
-    max-height: 100px; /* Ajustez la hauteur maximale selon vos besoins */
+    max-width: 100px; /* Ajustez la largeur maximale selon  besoins */
+    max-height: 100px; /* Ajustez la hauteur maximale selon  besoins */
     border-radius: 5px; /* Arrondir les coins des images */
     display: block; /* Pour centrer les images dans leurs cellules */
     margin: auto; /* Centrer les images horizontalement */
   }
-  .tabhead {
-    border: 2px solid rgb(6, 75, 54);
-    
-  }
  
+  
+  
   

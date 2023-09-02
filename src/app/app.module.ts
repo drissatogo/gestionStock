@@ -13,6 +13,8 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { ModificationDuProduitComponent } from './modification-du-produit/modification-du-produit.component';
 import { AjoutClientComponent } from './ajout-client/ajout-client.component';
 import { ListeClientComponent } from './liste-client/liste-client.component';
+import { ClientService } from './client.service';
+import { ListeExpeditionComponent } from './liste-expedition/liste-expedition.component';
 
 const routes:Routes=[
   {path:'dashboard',component:DashboardComponent},
@@ -25,8 +27,9 @@ const routes:Routes=[
   {path:'stock', component:EtatStockComponent},
   {path:'expedition',component:ExpeditionComponent},
   {path:'client', component:ListeClientComponent},
-  {path:'addcustom', component:AjoutClientComponent}
-  
+  {path:'addcustom', component:AjoutClientComponent},
+  {path:'expedies', component:ListeExpeditionComponent}
+
 ]
 
 @NgModule({
@@ -40,7 +43,8 @@ const routes:Routes=[
     AccueilComponent,
     ModificationDuProduitComponent,
     AjoutClientComponent,
-    ListeClientComponent
+    ListeClientComponent,
+    ListeExpeditionComponent
   ],
   imports: [
     FormsModule,
@@ -48,7 +52,11 @@ const routes:Routes=[
     RouterModule.forRoot(routes)
   ],
   exports:[RouterModule],
-  providers: [],
+  providers: [
+    
+      ClientService // Ajoutez le service ici
+  ],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

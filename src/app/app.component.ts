@@ -17,16 +17,19 @@ this.redirection.navigateByUrl('dashboard');
     this.redirection.navigateByUrl('reception');
 }
 onEtatStock(){
-  this.redirection.navigateByUrl('etat')
+  this.redirection.navigateByUrl('etat');
 }
 onExpedition(){
-  this.redirection.navigateByUrl('expedition')
+  this.redirection.navigateByUrl('expedies');
+}
+faireExpedition(){
+  this.redirection.navigateByUrl('expedition');
 }
 onClient(){
-  this.redirection.navigateByUrl('client')
+  this.redirection.navigateByUrl('client');
 }
 pourAjouterClient(){
-  this.redirection.navigateByUrl('addcustom')
+  this.redirection.navigateByUrl('addcustom');
 }
 }
 

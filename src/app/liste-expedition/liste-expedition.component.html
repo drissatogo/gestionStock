@@ -1,8 +1,8 @@
-<div class="reception">
-    <h3>Liste des Clients</h3>
-    <div (click)="pourAjouterClient()">
-      <i  class="fa-solid fa-plus fa-2x" style="justify-content: end;margin-left: 96%;"></i>
-     </div>
+<div class="expedition">
+    <h1>Liste des Clients</h1>
+    <div (click)="faireExpedition()" >
+        <h3 style="justify-content: end;margin-left: 85%;"> Expédier</h3>
+       </div>
     <div class="tabettri">
     <!-- <div class="tri">
     <div style="display: flex;">
@@ -24,28 +24,28 @@
   <div class="tableau">
   <table id="table">
     <thead>
-      <tr class="tabhead">
+      <tr>
        
-        <th>IdClient</th>
-        <th>Nom </th>
-        <th>telephone</th>
-        <th>Email</th>
+        <th>Produit</th>
+        <th>Quantité</th>
+        <th>Description</th>
         <th>Actions</th>
+        
         
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let client of clients ">
+      <tr >
         
-        <td>{{ client.id }}</td>
-        <td>{{ client.nom }}</td>
-        <td>{{ client.telephone}}</td>
-        <td>{{ client.email }}</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        
         
 
         <td>
-            <span style="margin-right: auto;"   [innerHTML]="client.iconeModification"></span>
-            <span style=" margin-left: auto;"   [innerHTML]="client.iconeSuppression"></span>
+            <span style="margin-right: auto;"   ></span>
+            <span style=" margin-left: auto;"   ></span>
         </td>
       </tr>
     </tbody>
@@ -55,4 +55,5 @@
   
 </div>
 </div>
+
 

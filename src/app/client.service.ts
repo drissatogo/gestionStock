@@ -1,10 +1,14 @@
 import { Injectable } from '@angular/core';
+import { Client } from './client';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClientService {
+  modifierClient(clientModifie: Client) {
+    throw new Error('Method not implemented.');
+  }
  private client :any[]= [];
  private lastClientId: number = 0;
   private saveClientToLocal() {
@@ -40,7 +44,7 @@ export class ClientService {
   }
   }
 
-  modifierProduit(nouveauClient: any) {
+  modifierlient(nouveauClient: any) {
     const index = this.client.findIndex(ancienClient => ancienClient.id === nouveauClient.id);
     if (index !== -1) {
       this.client[index] = nouveauClient;

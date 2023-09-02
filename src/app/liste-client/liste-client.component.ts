@@ -10,9 +10,12 @@ export class ListeClientComponent  {
   
   clients: any[] = [];
   addcustom: any;
+ 
+
+  constructor(private router: Router) {}
    
- pourAjouterClient(){
-  this.addcustom.navigateByUrl('addcustom/')
- }
+  pourAjouterClient() {
+    this.router.navigateByUrl('addcustom');
+  }
 }
 

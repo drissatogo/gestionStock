@@ -1,33 +1,27 @@
 <div class="ajout-client-container">
-    
-    <form (ngSubmit)="ajouterClient()" #clientForm="ngForm">
-        <h2>Ajout de Client</h2>
-      <div class="milieu">
-        <div class="form-group">
-
-            <div>
-                <label for="id">IdClient</label>
-            <input type="number" id="id" name="id" [(ngModel)]="id" required>
+  <form (ngSubmit)="ajouterClient()" #clientForm="ngForm">
+    <h2>Ajout de Client</h2>
+    <div class="milieu">
+      <div class="form-group">
+        <div>
+          <label for="id">IdClient</label>
+          <input type="number" id="id" name="id" [(ngModel)]="id" required>
         
+          <label for="nom">Nom Complet</label>
+          <input type="text" id="nom" name="nom" [(ngModel)]="nom" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" [(ngModel)]="email" required>
         
-            <label for="nom">Nom Complet</label>
-            <input type="text" id="nom" name="nom" [(ngModel)]="nom" required>
-            </div>
-        
-            <div>
-                <label for="email">Email</label>
-            <input type="email" id="email" name="email" [(ngModel)]="email" required>
-          
-        
-            <label for="telephone">Téléphone</label>
-            <input type="tel" id="telephone" name="telephone" [(ngModel)]="telephone" required>
-            </div>
-          </div>
-          <div class="button">
-          <button type="submit">Annuler</button>
-          <button type="submit" >Ajouter</button>
+          <label for="telephone">Téléphone</label>
+          <input type="tel" id="telephone" name="telephone" [(ngModel)]="telephone" required>
         </div>
       </div>
-    </form>
-  </div>
-  
+      <div class="button">
+        <button (click)="pourAnnulerAjoutClient()" type="button">Annuler</button>
+        <button (click)="ajouterClient()" type="submit">Ajouter</button>
+      </div>
+    </div>
+  </form>
+</div>
