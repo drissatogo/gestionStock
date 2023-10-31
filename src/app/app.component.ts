@@ -19,5 +19,14 @@ this.redirection.navigateByUrl('dashboard');
 onEtatStock(){
   this.redirection.navigateByUrl('etat')
 }
+onExpedition(){
+  this.redirection.navigateByUrl('expedition')
+}
+onCategories(){
+  this.redirection.navigateByUrl('categories')
+}
+afficherDetails(){
+  this.redirection.navigateByUrl('detail')
+}
 }
 

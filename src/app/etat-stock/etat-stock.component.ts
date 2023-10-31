@@ -8,11 +8,26 @@ import { ProduitService } from '../service/produit.service';
   styleUrls: ['./etat-stock.component.scss']
 })
 export class EtatStockComponent implements OnInit{
+afficherDetails(_t41: any) {
+throw new Error('Method not implemented.');
+}
+modifierProduit(_t41: any) {
+throw new Error('Method not implemented.');
+}
+supprimerProduit(produit:any): void{
+  const confirmation = confirm(`Voulez-vous vraiment supprimer "${produit.nom}" du stock ?`);
+  if (confirmation) {
+  this.produitService.supprimerProduit(produit);
+  this.produits = this.produitService.getProduits();
+}
+}
   produits: any[] = [];
 
   constructor(private produitService : ProduitService, private gohome: Router) {}
   ngOnInit(): void {
-    this.produits = this.produitService.getProduit();
+    
+    this.produits = this.produitService.getProduits();
+  
   }
 
   vershome() {
@@ -35,6 +50,18 @@ export class EtatStockComponent implements OnInit{
   selectedImage: any;
 
   handleFileInput(event: any): void {
-    // Logique pour gérer la sélection d'image
+    const file = event.target.files[0];
+
+    if (file) {
+      const reader = new FileReader();
+
+      reader.onload = (e: any) => {
+        this.selectedImage = e.target.result;
+      };
+
+      reader.readAsDataURL(file);
+    }
   }
 }
+
+

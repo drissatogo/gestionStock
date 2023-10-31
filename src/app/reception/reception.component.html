@@ -1,52 +1,47 @@
-<div class="reception">
-    <div class="tri">
-    <div style="display: flex;">
-      
-      <label for="nom">Trier par:</label><br>
-      <select name="" id=""><input type="text" id="nom" name="nom" required><br><br></select>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajouter un produit</title>
+  <!-- Inclure les liens vers les fichiers CSS nécessaires pour le style -->
+</head>
+<body>
+  <div class="ajout-produit">
+    <div class="haut">
+      <button (click)="vershome()">
+        <i class="fa-solid fa-arrow-left"></i> Retour
+      </button>
+      <h2>Ajouter un produit</h2>
     </div>
-    <div>
-      <input type="text" id="searchInput" placeholder="Rechercher...">
-    </div>
-</div><br><br>
-   <button (click)="ajouterproduit()"><div><i  class="fa-solid fa-plus" style="justify-content: end;">
-    <a routerLink="/ajoutProduit"></a>
-</i></div></button>
-   <div class="tableau">
-    <table id="table">
-      <thead>
-          <tr>
-              <th>Image</th>
-              <th>Nom du Produit </th>
-              <th>Categorie</th>
-              <th>Quantité</th>
-              <th>Prix.U(F)</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td><img src="gestionStock\src\assets\Capture d'écran 2023-08-23 125416.png" alt=""></td>
-              <td> Iphone X</td>
-              <td>Téléphone</td>
-              <td>60</td>
-              <td>150 000 F</td>
-          </tr>
-          <tr>
-              <td><img src="C:\Users\togo.drissa\Pictures\Screenshots\Capture d'écran 2023-08-23 130052.png" alt=""></td>
-              <td>Hp Pavillon </td>
-              <td>Ordinateur</td>
-              <td>30</td>
-              <td>270 000 F</td>
-          </tr>
-          <tr>
-              <td><img src= "C:\Users\togo.drissa\Pictures\Screenshots\Capture d'écran 2023-08-23 130237.png" alt=""></td>
-              <td>Hp Imprimante </td>
-              <td>Scanner</td>
-              <td>20</td>
-              <td>225 000 F</td>
-          </tr>
-      </tbody>
-  </table>
-   </div>
-   
-</div>
+    <form (ngSubmit)="ajouterProduit()" class="formulaire-ajout">
+      <div class="image">
+        <label for="photoInput">Photo du produit:</label>
+        <input type="file" id="photoInput" name="photo" (change)="handleFileInput($event)" required>
+        <img [src]="selectedImage" *ngIf="selectedImage" alt="Photo du produit">
+      </div>
+      <div class="champs">
+        <label for="nom">Nom du produit:</label>
+        <input type="text" id="nom" name="nom" [(ngModel)]="nom" required>
+      </div>
+      <div class="champs">
+        <label for="categorie">Catégorie:</label>
+        <select id="categorie" name="categorie" [(ngModel)]="categorie">
+          <option value="telephone">Téléphone</option>
+          <option value="ordinateur">Ordinateur</option>
+          <option value="scanner">Scanner</option>
+        </select>
+      </div>
+      <div class="champs">
+        <label for="quantite">Quantité:</label>
+        <input type="number" id="quantite" name="quantite" [(ngModel)]="quantite" required>
+      </div>
+      <div class="champs">
+        <label for="prix">Prix unitaire (F):</label>
+        <input type="number" id="prix" name="prix" [(ngModel)]="prix" required>
+      </div>
+      <button type="submit" class="bouton-ajouter">Ajouter</button>
+    </form>
+  </div>
+</body>
+</html>

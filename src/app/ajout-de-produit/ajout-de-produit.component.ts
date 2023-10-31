@@ -20,47 +20,44 @@ export class AppModule { }
   styleUrls: ['./ajout-de-produit.component.scss']
 })
 export class AjoutDeProduitComponent {
-  
+  vershome(): void {
+    this.router.navigateByUrl('/etat');
+  }
   nom: string = '';
   categorie: string = '';
   quantite: number = 0;
   prix: number = 0;
   selectedImage: any;
-  constructor(private router: Router, private produitService : ProduitService) {}
-  // Méthode pour ajouter un produit à la liste
+
+  constructor(private router: Router, private produitService: ProduitService) {}
+
   ajouterProduit(): void {
     const nouveauProduit = {
-      nom:this.nom,
-      categorie:this.categorie,
-      quantite:this.quantite,
-      prix:this.prix,
-      iconeSuppression: '<i class="fa-solid fa-trash"></i>',
-      iconeModification: '<i class="fa-solid fa-pen-to-square"></i>'
+      id: this.produitService.getProduits().length + 1,
+      nom: this.nom,
+      categorie: this.categorie,
+      quantite: this.quantite,
+      prix: this.prix,
+      image: this.selectedImage
     };
-  
-    // Ajouter le nouveauProduit à la liste des produits
+
     this.produitService.addProduit(nouveauProduit);
 
+    // Rediriger vers l'état de stock après avoir ajouté le produit
+    this.router.navigateByUrl('/etat');
   }
-  
-  // constructor(private router:Router){}
-  vershome(){
-    this.router.navigateByUrl('gohome')
-  }
-  // selectedImage: any;
 
   handleFileInput(event: any): void {
     const file = event.target.files[0];
-    
+
     if (file) {
       const reader = new FileReader();
-      
+
       reader.onload = (e: any) => {
         this.selectedImage = e.target.result;
       };
-      
+
       reader.readAsDataURL(file);
     }
-    
   }
 }
